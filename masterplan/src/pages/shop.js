@@ -64,7 +64,7 @@ function Items({ title, image, oldPrice, newPrice }) {
     );
   }
 
-function Shop({ image }) {
+function Shop() {
     return (
   <>
   <Header site={'Shop'}/>
