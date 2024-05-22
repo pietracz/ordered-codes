@@ -1,19 +1,9 @@
-import React, {useEffect, useState } from 'react'
+import React from 'react'
 
 function App() {
-  const [backendData, setBackendData] = useState([{}]); // Initialisierung mit einem leeren Objekt im Array
-
-  useEffect(() => {
-    fetch('/api')
-      .then(response => response.text())
-      .then(data => {setBackendData(data)})
-        .catch(err => console.error("Fehler beim Abruf!!!!", err));
-  }, []);
-
-  return (
-    <div>
-    </div>
-  );
+  fetch('http://localhost:5000/')
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error(error));
 }
-
 export default App;
