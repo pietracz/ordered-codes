@@ -55,6 +55,8 @@
             color: #777;
             text-align: center;
             margin: 80px auto 20px;
+            position: absolute;
+            bottom: 0;
         }
 
         h2 {

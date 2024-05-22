@@ -1,8 +1,7 @@
 import React from 'react';
-import './style.css';
-import Header from './header'
-import Nav from './nav'
-import Footer from './footer'
+import Header from '../components/header'
+import Nav from '../components/nav'
+import Footer from '../components/footer'
 
 function Error() {
     return (

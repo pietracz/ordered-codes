@@ -1,21 +1,20 @@
 import React from 'react';
-import './style.css';
-import Header from './header'
-import Nav from './nav'
-import Footer from './footer'
+import Header from '../components/header'
+import Nav from '../components/nav'
+import Footer from '../components/footer'
 
 function Create() {
     return (
         <>
-        <Header />
+        <Header site={'Create'} />
         <Nav />
         <div className="create-blog content">
           <form>
-            <label htmlFor="title">Blog title:</label>
+            <label htmlFor="title">Title:</label>
             <input type="text" id="title" name="title" required />
-            <label htmlFor="snippet">Blog snippet:</label> 
+            <label htmlFor="snippet">Snippet:</label> 
             <input type="text" id="snippet" name="snippet" required />
-            <label htmlFor="body">Blog body:</label>
+            <label htmlFor="body">Content:</label>
             <textarea id="body" name="body" required></textarea> 
   
             <button>Submit</button>
