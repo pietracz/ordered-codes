@@ -58,6 +58,10 @@
             justify-content: center; /* Kacheln horizontal zentrieren (optional) */
           }
 
+          .name {
+            color: #ddd;
+          }
+
         .container {
             width: 300px;
             height: 400px;
@@ -138,10 +142,17 @@
           }
           
           .price .old {
+            color: #222; /* Helleres Grau */
+          }
+
+          .line-trough {
             text-decoration: line-through;
-            color: #ccc; /* Helleres Grau */
           }
           
+          .price .new {
+            color: #ddd;
+          }
+
           .container:hover .price {
             transform: translateY(0);
             transition-delay: 0.3s;

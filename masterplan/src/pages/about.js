@@ -11,19 +11,15 @@ function About() {
     <div className="about content">
         <h2>About Us</h2>
         <p>
-        It go Halle Berry or hallelujah.
-        <br></br>
+        Be the last one out to get this dough? No way
+        <br/>
+        Love one of you bucket-headed hoes? No way
+        <br/>
+        Hit the streets, then we break the code? No way
+        <br/>
+        Hit the brakes, when they on patrol? No way
+        <br/>
         - Money Trees
-        </p>
-        <p>
-        I'm pulling up with an emo chick that's broken.
-        <br></br>
-        - Hot Girl Summer
-        </p>
-        <p>
-        I want the world in my hands.
-        <br></br>
-        - Sweater Weather
         </p>
     </div>
   <Footer />
