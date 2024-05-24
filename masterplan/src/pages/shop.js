@@ -33,11 +33,12 @@ function Shop() {
   <>
   <Header site={'Shop'}/>
   <Nav />
-    <div classNameName="content">
+    <div className="content">
         <h2>Shop</h2>
         <div className="items-container">
-        {itemInformation.map((item) => (
+        {itemInformation.map((item, index) => ( /* Index über map in die Liste eintragen und als key speichern */
         <Items 
+        key={index}
         title={item.title}
         image={item.image}
         oldPrice={item.oldPrice}
