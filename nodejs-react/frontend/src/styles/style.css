@@ -238,3 +238,20 @@
             font-size: 1.2em;
             cursor: pointer;
         }
+
+        /* blog list styles */
+.blogs {
+  display: grid; /* Use grid for better layout control */
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); /* Responsive columns */
+  gap: 30px; /* Consistent spacing between blog items */
+  
+}
+
+.blogs .title {
+  font-size: 1.5em; /* Larger title for emphasis */
+  margin-bottom: 5px; /* Add some space below the title */
+}
+
+.blogs .body {
+  margin-top: 5px; /* Separate body from snippet */
+}

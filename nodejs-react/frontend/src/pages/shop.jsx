@@ -5,7 +5,7 @@ import Nav from '../components/nav'
 import Footer from '../components/footer'
 
 function Timer() {
-  const [counter, setCounter] = useState(Math.floor(Math.random() * 86400))
+  const [counter, setCounter] = useState(Math.floor(Math.random() * 3600))
 
   useEffect(() => {
     if (counter <= 0) {
@@ -45,7 +45,7 @@ function Item({ item }) {
       </div>
       <div className="items cart">
         <i className="fa fa-shopping-cart"></i>
-        <span><strong><Timer /> </strong></span>
+        <span><strong><Timer /></strong></span>
       </div>
     </div>
     <img src={item.image} alt={item.title} className="bg-image" /> {/* Bild als Hintergrund */}

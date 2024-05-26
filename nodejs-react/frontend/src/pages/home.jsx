@@ -8,7 +8,6 @@ function BlogList({ blog }) {
     return (
         <div key={blog.id}>
             <h3 className="title">{blog.title}</h3>
-            <p className="snippet">{blog.snippet}</p>
             <p className="body">{blog.body}</p>
         </div>
     )
@@ -18,7 +17,7 @@ function Home() {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/')
+        fetch('http://localhost:5000/submit')
        .then(res => res.json())
        .then(data => setData(data))
     }, []);
@@ -29,7 +28,7 @@ function Home() {
         <Nav />
         <div className="content">
             <h2>Blogs</h2>
-        <div className="items-container">
+        <div className='blogs'>
             {data.length > 0 ? (
             data.map((blog, index) => (
         <BlogList 
