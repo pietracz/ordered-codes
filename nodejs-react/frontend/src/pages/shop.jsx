@@ -55,13 +55,31 @@ function Item({ item }) {
 }
 
 function Shop() {
-  const [data, setData] = useState([{}]);
+  const [data, setData] = useState(null); // Initialisiere data als null
+  const [input, setInput] = useState('');
+  const [filteredData, setFilteredData] = useState([]);
 
   useEffect(() => {
     fetch('http://localhost:5000/shop')
       .then(response => response.json())
-      .then(data => setData(data))
+      .then(data => {
+        setData(data);
+        setFilteredData(data); // Initial sind alle Daten sichtbar
+      });
   }, []);
+
+  useEffect(() => {
+    // Filtere NUR, wenn data nicht null ist
+    if (data) {
+      const newData = data.filter(item => item.title.toLowerCase().includes(input));
+      setFilteredData(newData);
+    }
+  }, [input, data]);
+
+  function inputHandler(input){
+    var lowerCase = input.target.value.toLowerCase();
+    setInput(lowerCase);
+  };
 
   return (
     <>
@@ -69,12 +87,15 @@ function Shop() {
     <Nav />
     <div className="content">
       <h2>Shop</h2>
+      <div className="searchbar-wrapper">
+      <input type="text" required="" autoComplete='off' placeholder='Search...' className='searchbar' onChange={inputHandler}></input>
+      </div>
       <div className="items-container">
-      {data.map((item, index) => (
+      {filteredData.map((item, index) => (
         <Item
         key={index}
         item={item}
-/*         title={item.title}
+/*      title={item.title}
         image={item.image}
         oldPrice={item.oldPrice}
         newPrice={item.newPrice} *//>

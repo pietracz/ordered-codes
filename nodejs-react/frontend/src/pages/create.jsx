@@ -50,7 +50,9 @@ function Create() {
             <input type="text" id="title" name="title" required />
             <label htmlFor="body">Content:</label>
             <textarea id="body" name="body" required></textarea> 
-            <button>Submit</button>
+            <div className="buttons">
+              <button className="btn"><span></span><p data-start="good luck!" data-text="Create Blog" data-title="Ready"></p></button>
+            </div>
           </form>
         </div>
         <Footer />
